@@ -1,25 +1,23 @@
-//
-//  ViewController.swift
-//  InnerShadowTest
-//
-//  Created by ted gao on 20/3/2016.
-//  Copyright © 2016 ted gao. All rights reserved.
-//
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+class ViewController: UIViewController
+{
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        view.backgroundColor = UIColor.redColor()
+        
+        let innerFrame = CGRectMake(100, 100, 100, 100)
+        
+        let innerView = UIView(frame: innerFrame)
+        
+        innerView.backgroundColor = UIColor.greenColor()
+        
+        innerView.addInnerShadow(onSide: UIView.innerShadowSide.BottomAndLeft, shadowColor: UIColor.blackColor(), shadowSize: 10.0, cornerRadius: 0.0, shadowOpacity: 1.0)
+        
+        view.addSubview(innerView)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
