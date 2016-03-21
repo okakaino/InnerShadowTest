@@ -4,16 +4,16 @@ Methods to draw inner shadow on UIView
 # Screenshots
 
 inner shadow on all four sides  
-<img src="https://raw.githubusercontent.com/diiingdong/InnerShadowTest/master/Screenshots/Right.png" height="200x">
+<img src="https://raw.githubusercontent.com/diiingdong/InnerShadowTest/master/Screenshots/All.png" width="200x">
 
 inner shadow on the right  
-![Right](https://raw.githubusercontent.com/diiingdong/InnerShadowTest/master/Screenshots/Right.png)
+<img src="https://raw.githubusercontent.com/diiingdong/InnerShadowTest/master/Screenshots/Right.png" width="200x">
 
 inner shadow on bottom and left  
-![Bottom and left](https://raw.githubusercontent.com/diiingdong/InnerShadowTest/master/Screenshots/Bottom%20and%20Left.png)
+<img src="https://raw.githubusercontent.com/diiingdong/InnerShadowTest/master/Screenshots/Bottom%20and%20Left.png" width="200x">
 
 inner shadow except bottom  
-![Except bottom](https://raw.githubusercontent.com/diiingdong/InnerShadowTest/master/Screenshots/Except%20Bottom.png)
+<img src="https://raw.githubusercontent.com/diiingdong/InnerShadowTest/master/Screenshots/Except%20Bottom.png" width="200x">
 
 # How to use
 
