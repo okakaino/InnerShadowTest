@@ -4,7 +4,7 @@ Methods to draw inner shadow on UIView
 # Screenshots
 
 inner shadow on bottom and left  
-<img src="https://raw.githubusercontent.com/diiingdong/InnerShadowTest/master/Screenshots/Bottom%20and%20Left.png" width="200x">
+<img src="https://raw.githubusercontent.com/okakaino/InnerShadowTest/master/Screenshots/Bottom%20and%20Left.png" width="200x">
 
 # How to use
 
