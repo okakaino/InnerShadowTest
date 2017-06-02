@@ -7,17 +7,16 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.redColor()
+        view.backgroundColor = UIColor.blue.withAlphaComponent(0.5)
         
-        let innerFrame = CGRectMake(100, 100, 100, 100)
+        let innerFrame = CGRect(x: 50, y: 100, width: 100, height: 100)
         
         let innerView = UIView(frame: innerFrame)
         
-        innerView.backgroundColor = UIColor.greenColor()
+        innerView.backgroundColor = UIColor.cyan
         
-        innerView.addInnerShadow(onSide: UIView.innerShadowSide.BottomAndLeft, shadowColor: UIColor.blackColor(), shadowSize: 10.0, cornerRadius: 0.0, shadowOpacity: 1.0)
+        innerView.addInnerShadow(onSide: UIView.innerShadowSide.bottomAndLeft, shadowColor: UIColor.red, shadowSize: 10.0, shadowOpacity: 10.0)
         
         view.addSubview(innerView)
     }
 }
-
