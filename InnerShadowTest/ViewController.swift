@@ -17,6 +17,12 @@ class ViewController: UIViewController
         
         innerView.addInnerShadow(onSide: UIView.innerShadowSide.bottomAndLeft, shadowColor: UIColor.red, shadowSize: 10.0, shadowOpacity: 10.0)
         
+        var transform = CGAffineTransform.identity
+        transform = transform.rotated(by: CGFloat(Double.pi / 4))
+        transform = transform.scaledBy(x: 1.5, y: 2.0)
+        
+        innerView.transform = transform
+        
         view.addSubview(innerView)
     }
 }
