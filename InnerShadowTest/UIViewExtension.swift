@@ -3,13 +3,16 @@ import UIKit
 
 extension UIView
 {
-    enum innerShadowSide
+    // different inner shadow styles
+    public enum innerShadowSide
     {
         case all, left, right, top, bottom, topAndLeft, topAndRight, bottomAndLeft, bottomAndRight, exceptLeft, exceptRight, exceptTop, exceptBottom
     }
     
-    func addInnerShadow(onSide: innerShadowSide, shadowColor: UIColor, shadowSize: CGFloat, cornerRadius: CGFloat = 0.0, shadowOpacity: Float)
+    // define function to add inner shadow
+    public func addInnerShadow(onSide: innerShadowSide, shadowColor: UIColor, shadowSize: CGFloat, cornerRadius: CGFloat = 0.0, shadowOpacity: Float)
     {
+        // define and set a shaow layer
         let shadowLayer = CAShapeLayer()
         shadowLayer.frame = bounds
         shadowLayer.shadowColor = shadowColor.cgColor
@@ -18,11 +21,13 @@ extension UIView
         shadowLayer.shadowRadius = shadowSize
         shadowLayer.fillRule = kCAFillRuleEvenOdd
         
-        // Outer rectangle to restrict drawing area
+        // define shadow path
         let shadowPath = CGMutablePath()
+        
+        // define outer rectangle to restrict drawing area
         let insetRect = bounds.insetBy(dx: -shadowSize * 2.0, dy: -shadowSize * 2.0)
         
-        // Inner path for mask
+        // define inner rectangle for mask
         let innerFrame: CGRect = { () -> CGRect in
             switch onSide
             {
@@ -55,12 +60,17 @@ extension UIView
             }
         }()
         
+        // add outer and inner rectangle to shadow path
         shadowPath.addRect(insetRect)
         shadowPath.addRect(innerFrame)
         
+        // set shadow path as show layer's
         shadowLayer.path = shadowPath
         
+        // add shadow layer as a sublayer
         layer.addSublayer(shadowLayer)
+        
+        // hide outside drawing area
         clipsToBounds = true
     }
 }
